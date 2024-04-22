@@ -17,12 +17,12 @@ public class FrogSimulation
 	{ 
 		int currentDistance = 0;
 		int remaningHops = maxHops;
-		while(currentDistance < goalDistance && distasnce >= 0 && remainingHops > 0){
+		while(currentDistance < goalDistance && distasnce >= 0 && remaningHops > 0){
 	currentDistance += hopDistance();
 		if(currentDistance >= goalDistance)
 			return true;
 		else
-			remaining--;
+			remaningHops--;
 		}
 		return false;
 	}
@@ -30,11 +30,11 @@ public class FrogSimulation
 	public double runSimulations(int num)
 	{ 
 		double total = 0;
-		for(int i =0; i < nums; i ++){
+		for(int i =0; i < num; i ++){
 	if(simulate() == true)
 		total++;
 		}
-	return total/nums;
+	return total/num;
 	}
 	
 	
